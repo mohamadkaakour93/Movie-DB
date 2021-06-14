@@ -15,13 +15,14 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
   })
 
-try {
+  try {
     mongoose.connect("mongodb+srv://bubbles:newpass13@cluster0.iczof.mongodb.net/MoviesDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, function(){
         console.log("Connected to Movies Database")
     }) 
 } catch (error) {
     console.log(error.message)
 }
+
 
 const schema = mongoose.Schema({
     title: {
