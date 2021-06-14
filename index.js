@@ -63,9 +63,14 @@ app.get('/movies/update', function(req, res) {
     res.status(200).send("Update")
 });
 
-app.get('/movies/delete', function(req, res) {
-    res.status(200).send("Delete")
+app.get('/movies/delete/:id', function(req, res) {
+    if(req.query.id <=0 || req.params.id > movies.length){res.status(404).send('the movie ' + req.params.id + ' does not exist')}
+    else{
+        movies.splice(req.params.id -1, 1)
+        res.send(movies)
+    }
 }); 
+
 app.get('/movies/get/by-date', function(req, res) {
     movies.sort(function(a,b){
         return a.year-b.year;
