@@ -16,7 +16,7 @@ app.listen(port, () => {
   })
 
   try {
-    mongoose.connect("mongodb+srv://bubbles:newpass13@cluster0.iczof.mongodb.net/MoviesDB?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, function(){
+    mongoose.connect("mongodb+srv://mohamadkaakour:dbUserPassword@cluster0.5fhk7.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true}, function(){
         console.log("Connected to Movies Database")
     }) 
 } catch (error) {
